@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: right;
 
-  & div {
+  div {
     font-size: 25px;
     width: 150px;
     padding: 5px;
@@ -12,6 +12,17 @@ nav {
       font-weight: 600;
       cursor: pointer;
       transition: font-weight 500ms ease;
+    }
+  }
+  .cart {
+    font-size: 28px;
+
+    padding: 5px;
+
+    &:hover {
+      color: #dc3d3d;
+      cursor: pointer;
+      transition: color 500ms ease;
     }
   }
 }
