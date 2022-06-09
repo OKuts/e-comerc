@@ -1,0 +1,55 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  .good {
+    width: 33%;
+    background-color: #f5f5f5;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 10px;
+
+    h2, p, b {
+      margin: 10px 20px;
+      color: #333;
+    }
+
+    b {
+      color: #5fa36a;
+    }
+
+    .add-to-cart {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background-color: #bcbcbc;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 35px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 20px;
+      transition: transform 500ms ease;
+
+      &:hover {
+        transform: scale(1.5) translateY(-3px);
+      }
+    }
+
+
+    img {
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 500ms ease;
+      }
+    }
+  }
+}
+
