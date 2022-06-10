@@ -7,10 +7,12 @@ import {Goods} from './components/Goods';
 
 function App() {
     const [goodsArr, setGoodsArr] = useState(goods)
+    const [order, setOrder] = useState({})
+
     return (
         <div className={'wrapper'}>
             <Header>Hello</Header>
-            <Goods goods={goodsArr}/>
+            <Goods goods={goodsArr} order={order} onAdd={setOrder}/>
             <Footer>Footer</Footer>
         </div>
 

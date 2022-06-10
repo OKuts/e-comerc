@@ -2,11 +2,42 @@ header {
   .header {
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
 
   .logo {
     font-weight: 600;
     font-size: 20px;
+  }
+
+  .cart {
+    font-size: 28px;
+    padding: 5px;
+    display: inline-block;
+    margin-left: auto;
+    transition: color 500ms, transform 500ms ease;
+
+    &:hover {
+      color: #dc3d3d;
+      cursor: pointer;
+    }
+  }
+
+  .active {
+    color: #dc3d3d;
+    transform: scale(1.5);
+  }
+
+  .cartOpen {
+    position: absolute;
+    width: 400px;
+    background-color: lightgray;
+    min-height: 200px;
+    top: 50px;
+    right: 0;
+    z-index: 1;
+    -webkit-box-shadow: 5px 5px 6px -3px #000000;
+    box-shadow: 5px 5px 6px -3px #000000;
   }
 
   .presentation {
