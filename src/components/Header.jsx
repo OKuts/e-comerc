@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {Nav} from "./Nav";
 import {FaCartArrowDown} from "react-icons/fa";
+import {ShowOrder} from "./ShowOrder";
 
-export const Header = () => {
+export const Header = ({order, changeOrder}) => {
     const [cartOpen, setCartOpen] = useState(false)
     return (
         <header>
@@ -12,9 +13,7 @@ export const Header = () => {
                     onClick={() => setCartOpen(!cartOpen)}
                     className={`cart${cartOpen ? ' active' : ''}`}/>
                 <Nav/>
-                {cartOpen && <div className="cartOpen">
-                    hello
-                </div>}
+                {cartOpen && <ShowOrder order={order} changeOrder={changeOrder}/>}
             </div>
             <div className="presentation">
             </div>

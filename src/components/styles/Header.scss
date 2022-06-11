@@ -28,17 +28,6 @@ header {
     transform: scale(1.5);
   }
 
-  .cartOpen {
-    position: absolute;
-    width: 400px;
-    background-color: lightgray;
-    min-height: 200px;
-    top: 50px;
-    right: 0;
-    z-index: 1;
-    -webkit-box-shadow: 5px 5px 6px -3px #000000;
-    box-shadow: 5px 5px 6px -3px #000000;
-  }
 
   .presentation {
     margin: 50px 0;

@@ -1,12 +1,11 @@
 import React from "react";
 
-export const Good = ({good, onAdd, order}) => {
-    const addOrder = good => {
-        order[good.id]
-            ? onAdd({...order, [good.id]: order[good.id] + 1})
-            : onAdd({...order, [good.id]: 1})
+export const Good = ({good, onAdd, order, name}) => {
+    const addOrder = (name, good) => {
+        order[name]
+            ? onAdd({...order, [name]: {...good, count: order[name].count + 1}})
+            : onAdd({...order, [name]: {...good, count: 1}})
     }
-
     return (
         <div className={'good'}>
             <img src={`img/${good.img}`} alt={''}/>
@@ -14,7 +13,7 @@ export const Good = ({good, onAdd, order}) => {
             <p>{good.desc}</p>
             <b>{good.price}$</b>
             <div
-                onClick={() => addOrder(good)}
+                onClick={() => addOrder(name, good)}
                 className={'add-to-cart'}>+
             </div>
         </div>

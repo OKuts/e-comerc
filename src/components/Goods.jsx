@@ -3,8 +3,13 @@ import {Good} from "./Good";
 
 export const Goods = ({goods, onAdd, order}) => (
     <main>
-        {goods.map(good =>
-            <Good key={good.id} good={good} order={order} onAdd={onAdd}/>
+        {Object.keys(goods).map(key =>
+            <Good
+                key={key}
+                name={key}
+                good={goods[key]}
+                order={order}
+                onAdd={onAdd}/>
         )}
     </main>
 );
