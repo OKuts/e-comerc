@@ -17,7 +17,7 @@ export const Order = ({id, order, changeOrder}) => {
             <div className={'orderItem'}>
                 <img src={`img/${order[id].img}`} alt={''}/>
                 <h2>{order[id].title}</h2>
-                <p>{order[id].price * order[id].count}$</p>
+                <p>{new Intl.NumberFormat().format(order[id].price * order[id].count)}$</p>
                 <p>{order[id].count}</p>
                 <div>
                     <FaArrowAltCircleUp

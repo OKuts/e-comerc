@@ -1,0 +1,26 @@
+.categories {
+    display: flex;
+
+    div {
+        width: 60px;
+        text-align: center;
+        padding: 10px;
+        background-color: #ccc;
+        margin: 0 20px 20px 20px;
+        border-radius: 20px;
+        border: 2px solid transparent;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid #777; 
+            font-weight: 600;
+            transform: scale(1.1);
+        }
+    }
+
+    .current {
+        border: 2px solid #777; 
+        font-weight: 600;
+        transform: scale(1.1);
+    }
+}
